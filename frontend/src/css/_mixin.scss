@@ -1,0 +1,39 @@
+$color-border: #E1AFD1;
+$color-primary: #002651; 
+$color-red: #EE4266; 
+$color-background: #1C2536; 
+
+@mixin flex($direction: row, $justifyContent: center, $alignItems: center, $gap: 0.5rem) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justifyContent;
+    align-items: $alignItems;
+    gap: $gap; 
+    flex-wrap: wrap;
+} 
+
+@mixin inputColor($backgroundColor: white, $color: unset, $borderRadius: 10px, $boxShadow: 1px 1px 10px 2px rgba(0,0,0,0.1), $border: unset){
+    background-color: $backgroundColor;
+    color: $color; 
+    border-radius: $borderRadius; 
+    box-shadow: $boxShadow;
+    border: $border; 
+}
+
+@mixin inputPosition($padding: 1rem 2rem, $margin: unset, $align: unset){
+    margin: $margin; 
+    padding: $padding; 
+    text-align: $align;
+}
+
+@mixin inputSize($minWidth: unset, $minHeight: unset, $maxWidth: unset, $maxHeight: unset) {
+    min-width: $minWidth; 
+    min-height: $minHeight; 
+    max-width: $maxWidth;
+    max-height: $maxHeight;
+}
+
+@mixin inputLook() {
+    font-size: $fontSize; 
+    font-weight: $fontWeight;
+}

@@ -1,0 +1,74 @@
+
+@import "./mixin"; 
+
+// -------------------Header----------------------
+.nodeSelection{ 
+  @include flex(row, center, center, 2rem); 
+  @include inputPosition(1rem, 1rem 0 0); 
+
+  > div {
+    cursor: grab; 
+    @include inputSize(80px, 60px); 
+    @include flex(column); 
+    @include inputColor($color-background, white, 8px); 
+  }
+}
+.backgroundVariant{
+  position: relative;
+  @include flex(row, flex-end, flex-end, 1.5rem); 
+  > button {
+    @include inputPosition(0.75rem 1.5rem); 
+    @include inputColor(8px, 5px); 
+  }
+}
+// -------------------Header----------------------
+
+
+// -------------------Node----------------------
+.node {
+  @include inputSize(12rem, 12rem, 25rem, 28rem); 
+  @include inputColor(white, $color-primary, 8px, 0px 1px 5px $color-border, 1px solid $color-border); 
+  @include inputPosition(16px, 0 0 16px); 
+
+  .heading {
+    @include flex(row, space-around, center, 1rem); 
+    margin-bottom: 8px;
+    .nodeIcon{
+      margin-top: 2px;
+      color: $color-red; 
+    }
+  }
+  .body {
+    @include flex(column, unset, unset, 0); 
+    .labelStyle {
+      @include flex(column, unset, flex-start); 
+      @include inputPosition(8px, 0.5rem 0);
+      @include inputColor(none, none, 4px, none, 1px solid #ccc); 
+      font-size: 0.85rem; 
+      textarea {
+        @include inputSize(10rem, unset, 23rem, 23rem); 
+      }
+    }
+  }
+}
+// -------------------Node----------------------
+
+
+// -------------------Edge----------------------
+.edgeButton {
+  font-size: 1rem; 
+  @include inputColor(transparent, $color-red, none, none); 
+}
+// -------------------Edge-----------------------
+
+
+// -------------------Submit---------------------
+
+.btnDiv{
+  @include flex; 
+  .submitBtn{
+    @include inputColor(none, none, 8px, 0px 1px 4px gray); 
+    @include inputPosition(0.85rem 1.5rem); 
+  }
+}
+// -------------------Submit----------------------
